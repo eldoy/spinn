@@ -9,14 +9,24 @@ npm i spinn
 
 ### Usage
 
+**Server side rendered**
+
 Require lib:
 ```js
 const spinn = require('spinn')
 ```
 
-Include in web page:
+Include on web page:
 ```
 <script>${spinn}</spinn>
+```
+
+**Client side rendered**
+
+Include `dist/spinn-min.js`:
+
+```html
+<script src="spinn-min.js"></script>
 ```
 
 Use on page:

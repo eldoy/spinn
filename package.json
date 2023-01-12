@@ -4,6 +4,7 @@
   "description": "SVG spinners and loaders",
   "main": "index.js",
   "scripts": {
+    "build": "node scripts/build.js",
     "test": "echo 'no test runner installed'",
     "serve:test": "nodemon test/server.js"
   },
@@ -12,5 +13,8 @@
     "url": "https://github.com/eldoy/spinn"
   },
   "author": "Vidar Eldøy <vidar@eldoy.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
+  }
 }
