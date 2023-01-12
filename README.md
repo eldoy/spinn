@@ -3,10 +3,10 @@
 SVG spinner loader. Animated spinner with settings:
 
 * Color
-* Backgrund color
+* Background color
 * Size
 
-Created by [Eldøy Projects &raquo;](https://eldoy.com)
+<small>Created by [Eldøy Projects &rarr;](https://eldoy.com)</small>
 
 ### Install
 ```
