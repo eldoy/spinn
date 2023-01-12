@@ -1,6 +1,6 @@
 # Spinn
 
-SVG spinner loader. Animated spinner with settings:
+SVG spinner loader. Very cool animated spinner with settings:
 
 * Color
 * Background color
