@@ -6,7 +6,7 @@ SVG spinner loader. Animated spinner with settings:
 * Background color
 * Size
 
-<small>Created by [Eldøy Projects &rarr;](https://eldoy.com)</small>
+Created by [Eldøy Projects &rarr;](https://eldoy.com)
 
 ### Install
 ```
