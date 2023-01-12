@@ -1,8 +1,12 @@
 # Spinn
 
-SVG spinner loader.
+SVG spinner loader. Animated spinner with settings:
 
-Created by [Eldøy Projects](https://eldoy.com)
+* Color
+* Backgrund color
+* Size
+
+Created by [Eldøy Projects &raquo;](https://eldoy.com)
 
 ### Install
 ```
