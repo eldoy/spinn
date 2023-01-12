@@ -1,6 +1,6 @@
 {
   "name": "spinn",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "SVG spinner loader",
   "main": "index.js",
   "scripts": {
