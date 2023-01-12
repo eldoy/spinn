@@ -11,12 +11,12 @@ function page() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Spinn</title>
       </head>
-      <body>
+      <body style="background:black">
         <spinn></spinn>
         <script>
           ${spinn}
           var spinner = spinn().start()
-          setTimeout(spinner.stop, 5000)
+          setTimeout(spinner.stop, 1000)
         </script>
       </body>
     </html>

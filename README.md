@@ -35,8 +35,15 @@ Use on page:
 var spinner = spinn({
   // Where to insert the spinner
   el: 'spinn',
+
   // The color of the spinner
-  color: 'tomato'
+  color: 'tomato',
+
+  // Background color
+  bg: 'transparent',
+
+  // Size in pixels (width and height)
+  size: 20
 })
 
 // Start spinner
