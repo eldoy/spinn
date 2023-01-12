@@ -29,7 +29,13 @@ Include `dist/spinn-min.js`:
 <script src="spinn-min.js"></script>
 ```
 
-Use on page:
+Create an element where the spinner should appear:
+
+```
+<spinn></spinn>
+```
+
+Use on page, include in `<script>` tag:
 ```js
 // Create spinner, showing default options
 var spinner = spinn({
@@ -62,5 +68,6 @@ var spinner = spinn().start()
 setTimeout(spinner.stop, 5000)
 ```
 
+Created by [Eldøy Projects](https://eldoy.com)
 
 MIT Licensed. Enjoy!
