@@ -1,6 +1,6 @@
 # Spinn
 
-SVG spinners and loaders.
+SVG spinner loader.
 
 ### Install
 ```
