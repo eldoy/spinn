@@ -4,7 +4,8 @@
   "description": "SVG spinners and loaders",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'no test runner installed'"
+    "test": "echo 'no test runner installed'",
+    "serve:test": "nodemon test/server.js"
   },
   "repository": {
     "type": "git",
