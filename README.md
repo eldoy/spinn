@@ -2,6 +2,8 @@
 
 SVG spinner loader.
 
+Created by [Eldøy Projects](https://eldoy.com)
+
 ### Install
 ```
 npm i spinn
@@ -67,7 +69,5 @@ var spinner = spinn().start()
 // Stop after 5 seconds
 setTimeout(spinner.stop, 5000)
 ```
-
-Created by [Eldøy Projects](https://eldoy.com)
 
 MIT Licensed. Enjoy!
