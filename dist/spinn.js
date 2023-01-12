@@ -1,42 +1,43 @@
 window.spinn = function spinn(opt = {}) {
-  if (!opt.el) {
-    opt.el = 'spinn'
+  var OPTIONS = {
+    el: 'spinn',
+    color: 'tomato',
+    bg: 'transparent',
+    size: 20
   }
+  opt = Object.assign(OPTIONS, opt)
   if (typeof opt.el == 'string') {
     opt.el = document.querySelector(opt.el)
   }
-  if (!opt.color) {
-    opt.color = 'tomato'
-  }
+  var s = opt.size
   function svg(deg) {
-    return /* HTML */ `<svg height="20" width="20" viewBox="0 0 20 20">
-      <circle r="10" cx="10" cy="10" fill="white" />
+    return `<svg height="${s}" width="${s}" viewBox="0 0 ${s} ${s}">
+      <circle r="${s / 2}" cx="${s / 2}" cy="${s / 2}" fill="${opt.bg}" />
       <circle
-        r="5"
-        cx="10"
-        cy="10"
+        r="${s / 4}"
+        cx="${s / 2}"
+        cy="${s / 2}"
         fill="transparent"
         stroke="${opt.color}"
-        stroke-width="10"
+        stroke-width="${s / 2}"
         stroke-dasharray="calc(35 * ${deg} / 100) ${deg}"
-        transform="rotate(-90) translate(-20)"
+        transform="rotate(-90) translate(-${s})"
       />
     </svg>`
   }
 
   // Animate
-  let run
   function animate(count) {
     opt.el.innerHTML = svg(count)
     setTimeout(function () {
-      // console.log({ count })
       if (count > 90) {
         count = -1
       }
-      if (run) {
+      if (opt.el.spinn) {
         animate(++count)
       } else {
         opt.el.innerHTML = ''
+        delete opt.el.spinn
       }
     }, 20)
   }
@@ -44,13 +45,13 @@ window.spinn = function spinn(opt = {}) {
   var api = { start, stop }
 
   function start() {
-    run = true
+    opt.el.spinn = true
     animate(0)
     return api
   }
 
   function stop() {
-    run = false
+    opt.el.spinn = false
     return api
   }
 

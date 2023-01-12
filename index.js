@@ -27,18 +27,17 @@ module.exports = function spinn(opt = {}) {
   }
 
   // Animate
-  let run
   function animate(count) {
     opt.el.innerHTML = svg(count)
     setTimeout(function () {
-      // console.log({ count })
       if (count > 90) {
         count = -1
       }
-      if (run) {
+      if (opt.el.spinn) {
         animate(++count)
       } else {
-        // opt.el.innerHTML = ''
+        opt.el.innerHTML = ''
+        delete opt.el.spinn
       }
     }, 20)
   }
@@ -46,13 +45,13 @@ module.exports = function spinn(opt = {}) {
   var api = { start, stop }
 
   function start() {
-    run = true
+    opt.el.spinn = true
     animate(0)
     return api
   }
 
   function stop() {
-    run = false
+    opt.el.spinn = false
     return api
   }
 

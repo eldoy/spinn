@@ -1,13 +1,13 @@
-window.spinn=function(e={}){e.el||(e.el="spinn"),"string"==typeof e.el&&(e.el=document.querySelector(e.el)),e.color||(e.color="tomato");let n;function o(t){var r;e.el.innerHTML=(r=t,`<svg height="20" width="20" viewBox="0 0 20 20">
-      <circle r="10" cx="10" cy="10" fill="white" />
+window.spinn=function(t={}){"string"==typeof(t=Object.assign({el:"spinn",color:"tomato",bg:"transparent",size:20},t)).el&&(t.el=document.querySelector(t.el));var r=t.size;function i(e){var n;t.el.innerHTML=(n=e,`<svg height="${r}" width="${r}" viewBox="0 0 ${r} ${r}">
+      <circle r="${r/2}" cx="${r/2}" cy="${r/2}" fill="${t.bg}" />
       <circle
-        r="5"
-        cx="10"
-        cy="10"
+        r="${r/4}"
+        cx="${r/2}"
+        cy="${r/2}"
         fill="transparent"
-        stroke="${e.color}"
-        stroke-width="10"
-        stroke-dasharray="calc(35 * ${r} / 100) ${r}"
-        transform="rotate(-90) translate(-20)"
+        stroke="${t.color}"
+        stroke-width="${r/2}"
+        stroke-dasharray="calc(35 * ${n} / 100) ${n}"
+        transform="rotate(-90) translate(-${r})"
       />
-    </svg>`),setTimeout(function(){90<t&&(t=-1),n?o(++t):e.el.innerHTML=""},20)}var t={start:function(){return n=!0,o(0),t},stop:function(){return n=!1,t}};return t};
+    </svg>`),setTimeout(function(){90<e&&(e=-1),t.el.spinn?i(++e):(t.el.innerHTML="",delete t.el.spinn)},20)}var e={start:function(){return t.el.spinn=!0,i(0),e},stop:function(){return t.el.spinn=!1,e}};return e};

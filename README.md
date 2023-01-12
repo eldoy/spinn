@@ -52,6 +52,9 @@ spinner.start()
 // Stop spinner
 spinner.stop()
 
+// Stop spinner via element
+spin({ el: 'spin' }).stop()
+
 // Short cut, using default options
 var spinner = spinn().start()
 

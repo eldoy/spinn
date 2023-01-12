@@ -16,7 +16,7 @@ function page() {
         <script>
           ${spinn}
           var spinner = spinn().start()
-          setTimeout(spinner.stop, 1000)
+          setTimeout(spinner.stop, 5000)
         </script>
       </body>
     </html>
